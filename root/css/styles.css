@@ -5,7 +5,7 @@ html, body {
 
 body {
   font-family: 'Orbitron', sans-serif;
-  background-color: #eee;
+  background-color: #DDD;
 }
 
 a {
@@ -16,6 +16,14 @@ a {
 a:visited {
   color: initial;
   color:blueviolet;
+}
+
+/* CLase general */
+
+.section-h3 {
+  color: #fe7562;
+  text-align: center;
+  font-size: 1.5em;
 }
 
 /* Seccion header */
@@ -32,6 +40,7 @@ a:visited {
   padding-bottom: 30px;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   /* gap: 30px; */
   border-bottom: 5px dashed rgba(99, 164, 208, .5);
 } 
@@ -66,13 +75,14 @@ a:visited {
 }
 
 .contact-info h3 {
-  color: #fe7562;
+  font-size: 1.3em;
   margin: 10px;
 }
 
 .contact-info i {
   padding-right: 5px;
 }
+
 
 /* Seccion foto perfil */
 
@@ -84,6 +94,8 @@ a:visited {
 
 .profile-picture img {
  border-radius: 50%; 
+ object-fit: cover;
+ object-position: center;
  padding: 7px;
  border: 2px dashed #82b6d9;
 }
@@ -106,6 +118,61 @@ a:visited {
 .name h3 {
   font-family: 'Outfit', sans-serif;
   color: rgba(99, 164, 208, .8);
+}
 
+/* Seccion datos personales */
 
+.techinfo__flex {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.techinfo__ul-container {
+  flex-basis: 500px;
+  flex-shrink: 1;
+  flex-grow: 1;
+}
+
+.techinfo__ul-container ul {
+  list-style: none;
+  text-align: center;
+  padding-left: 0;
+}
+
+.techinfo__ul-container li {
+  display: inline-block;
+  margin-right: 35px;
+}
+
+.techinfo__ul-container i {
+  font-size: 5.5em;
+}
+
+#js {
+  color: #d4b830;
+}
+
+@media screen and (max-width: 610px) {
+  .contact-info {
+    flex-basis: 100%;
+    align-items: center;
+  }
+
+  .contact-info li {
+    text-align: center;
+  }
+
+  .techinfo__ul-container li {
+    display: block;
+    margin-bottom: 20px;
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .name {
+    flex-basis: 100%;
+    align-items: center;
+  }
 }
