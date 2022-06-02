@@ -120,7 +120,46 @@ a:visited {
   color: rgba(99, 164, 208, .8);
 }
 
-/* Seccion datos personales */
+/* Seccion Tech y Experiencia */
+
+.techAndExp {
+  display: flex;
+}
+
+.borde-container {
+  display: flex;
+  align-items: center;
+}
+
+.borde {
+  display: block;
+  height: 75%;
+  width: 4px;
+  background-color: rgba(99, 164, 208, .4);
+  border-radius: 999px;
+}
+
+/* Seccion Exp */
+
+.exp {
+  flex: 1;
+  /* border-left: 4px solid rgba(99, 164, 208, .3) */
+}
+
+.exp-flex ul {
+  list-style: none;
+  text-align: center;
+}
+
+.exp-flex li {
+  margin-bottom: 20px;
+}
+
+/* Seccion tech */
+
+.techinfo {
+  flex: 1;
+}
 
 .techinfo__flex {
   display: flex;
@@ -130,8 +169,8 @@ a:visited {
 
 .techinfo__ul-container {
   flex-basis: 500px;
-  flex-shrink: 1;
-  flex-grow: 1;
+  flex: 1;
+  
 }
 
 .techinfo__ul-container ul {
@@ -154,6 +193,11 @@ a:visited {
 }
 
 @media screen and (max-width: 610px) {
+
+  .techAndExp {
+    flex-direction: column;
+  }
+
   .contact-info {
     flex-basis: 100%;
     align-items: center;
