@@ -175,13 +175,20 @@ a:visited {
 
 .techinfo__ul-container ul {
   list-style: none;
-  text-align: center;
-  padding-left: 0;
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  place-content: center;
+  gap: 10px;
 }
 
 .techinfo__ul-container li {
   display: inline-block;
   margin-right: 35px;
+}
+
+.github {
+  grid-column: span 2;
+  text-align: center;
 }
 
 .techinfo__ul-container i {
