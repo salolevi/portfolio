@@ -32,21 +32,32 @@ a:visited {
   background-image: url(../img/header-img.avif);
   background-size: cover;
   background-color: rgba(155,155,155,0.7);
-  background-blend-mode:overlay
-  /* backdrop-filter: blur(10%); */
-  /* height: 150px; */
+  background-blend-mode:overlay;
 }
 
 /* Section Primaria */
 .primaryInfoContainer {
-  margin-top: 20px;
   padding-bottom: 30px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   /* gap: 30px; */
-  border-bottom: 5px dashed rgba(99, 164, 208, .5);
+  border-bottom: 5px solid rgba(99, 164, 208, .8);
+  /* backdrop-filter: blur(10px); */
+
 } 
+
+@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+  .primaryInfoContainer {
+    /* background-color: rgba(255, 255, 255, .5); */
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+  }
+
+  .header {
+    background-color: transparent;
+  }
+}
 
 /* Seccion de Contacto */
 
@@ -101,7 +112,7 @@ a:visited {
  object-fit: cover;
  object-position: center;
  padding: 7px;
- border: 2px dashed #82b6d9;
+ border: 4px dashed #82b6d9;
 }
 
 /* Seccion de nombre y titulo */
